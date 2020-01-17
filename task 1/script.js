@@ -3,7 +3,7 @@
 let text = document.querySelector('.text').textContent;
 let secondText = document.querySelector('.text2');
 let textArray = text.split(' ');
-let xui = textArray.map((item) => {
+let newArray = textArray.map((item) => {
     if (item.match(/\w@\w/)){
         item = '<b  style="color:green">' + '#personaldata#' + '</b>';
         
@@ -13,7 +13,7 @@ let xui = textArray.map((item) => {
     return item;
 });
 
-let newText = xui.join(' ');
+let newText = newArray.join(' ');
 secondText.innerHTML = newText;
 
 
